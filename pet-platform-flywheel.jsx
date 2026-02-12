@@ -91,11 +91,11 @@ const FLYWHEEL_STEPS = [
   { label: "사용자 환원", sub: "서비스 확장 · 가격 혜택", icon: "💎", angle: 288 },
 ];
 
-const SAMSUNG_SYNERGY = [
-  { name: "Galaxy Watch", desc: "반려인+반려견 패밀리 룩 웨어러블", icon: "⌚" },
-  { name: "Samsung Health", desc: "반려인-반려견 통합 건강 대시보드", icon: "❤️" },
-  { name: "SmartThings", desc: "펫 재택 환경 자동화 (온도·조명·CCTV)", icon: "🏠" },
-  { name: "Galaxy 생태계", desc: "갤럭시 사용자 Lock-in 강화", icon: "📱" },
+const ECOSYSTEM_SYNERGY = [
+  { name: "스마트워치 연동", desc: "반려인+반려견 패밀리 룩 웨어러블", icon: "⌚" },
+  { name: "헬스 플랫폼", desc: "반려인-반려견 통합 건강 대시보드", icon: "❤️" },
+  { name: "스마트홈", desc: "펫 재택 환경 자동화 (온도·조명·CCTV)", icon: "🏠" },
+  { name: "디바이스 생태계", desc: "사용자 Lock-in 강화", icon: "📱" },
 ];
 
 const REVENUE_MODELS = [
@@ -249,7 +249,7 @@ export default function PetPlatformFlywheel() {
             fontSize: 16,
           }}>🐾</div>
           <div>
-            <div style={{ color: COLORS.textMuted, fontSize: 10, letterSpacing: 2, textTransform: "uppercase" }}>Samsung MX · C-Lab → Sirius</div>
+            <div style={{ color: COLORS.textMuted, fontSize: 10, letterSpacing: 2, textTransform: "uppercase" }}>Sirius</div>
             <h1 style={{ fontSize: 22, fontWeight: 800, margin: 0, background: `linear-gradient(90deg, ${COLORS.text}, ${COLORS.accentLight})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               올인원 펫 케어 플랫폼 비즈니스 모델
             </h1>
@@ -266,7 +266,7 @@ export default function PetPlatformFlywheel() {
         {[
           { id: "overview", label: "플라이휠 전체 구조" },
           { id: "verticals", label: "파트너 버티컬 상세" },
-          { id: "samsung", label: "삼성 시너지" },
+          { id: "synergy", label: "에코시스템 시너지" },
         ].map(tab => (
           <button
             key={tab.id}
@@ -502,7 +502,7 @@ export default function PetPlatformFlywheel() {
       )}
 
       {/* === SAMSUNG SYNERGY VIEW === */}
-      {activeView === "samsung" && (
+      {activeView === "synergy" && (
         <div>
           <div style={{
             background: `linear-gradient(135deg, ${COLORS.purpleDim}, ${COLORS.card})`,
@@ -511,13 +511,13 @@ export default function PetPlatformFlywheel() {
             padding: 20,
             marginBottom: 16,
           }}>
-            <div style={{ fontSize: 15, fontWeight: 700, color: COLORS.purple, marginBottom: 4 }}>🔮 삼성 갤럭시 에코시스템 시너지</div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: COLORS.purple, marginBottom: 4 }}>🔮 디바이스 에코시스템 시너지</div>
             <div style={{ fontSize: 11, color: COLORS.textMuted, marginBottom: 16 }}>
-              펫 트래커를 통해 반려인을 삼성 생태계에 Lock-in하고, 디바이스 Cross-sell 기회를 창출
+              펫 트래커를 통해 반려인을 디바이스 생태계에 Lock-in하고, Cross-sell 기회를 창출
             </div>
             
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-              {SAMSUNG_SYNERGY.map((s, i) => (
+              {ECOSYSTEM_SYNERGY.map((s, i) => (
                 <div key={i} style={{
                   background: COLORS.bg,
                   borderRadius: 12,
@@ -545,10 +545,10 @@ export default function PetPlatformFlywheel() {
             <div style={{ fontSize: 13, fontWeight: 700, color: COLORS.text, marginBottom: 14 }}>🔄 시너지 시나리오</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {[
-                { title: "패밀리 룩 웨어러블", desc: "반려인은 Galaxy Watch, 반려견은 Pet Tracker — 산책 시 동시 활동 추적, 통합 리포트 생성", color: COLORS.accent },
-                { title: "Samsung Health 통합", desc: "반려인 건강(걸음수·심박) + 반려견 건강(활동량·이상징후)을 하나의 대시보드로 — '우리 가족 건강' 경험", color: COLORS.green },
-                { title: "SmartThings 연동", desc: "외출 시 반려견 행동 패턴 기반 자동 환경 제어 — 온도, 조명, CCTV 연계 알림", color: COLORS.gold },
-                { title: "갤럭시 생태계 Lock-in", desc: "펫 서비스는 Samsung 디바이스 간 원활한 경험 → Android/Galaxy 전환 비용 상승 → 충성도 강화", color: COLORS.purple },
+                { title: "패밀리 룩 웨어러블", desc: "반려인은 스마트워치, 반려견은 Pet Tracker — 산책 시 동시 활동 추적, 통합 리포트 생성", color: COLORS.accent },
+                { title: "헬스 플랫폼 통합", desc: "반려인 건강(걸음수·심박) + 반려견 건강(활동량·이상징후)을 하나의 대시보드로 — '우리 가족 건강' 경험", color: COLORS.green },
+                { title: "스마트홈 연동", desc: "외출 시 반려견 행동 패턴 기반 자동 환경 제어 — 온도, 조명, CCTV 연계 알림", color: COLORS.gold },
+                { title: "디바이스 생태계 Lock-in", desc: "디바이스 간 원활한 경험 → 전환 비용 상승 → 충성도 강화", color: COLORS.purple },
               ].map((s, i) => (
                 <div key={i} style={{
                   background: COLORS.bg,
@@ -570,7 +570,7 @@ export default function PetPlatformFlywheel() {
             border: `1px solid ${COLORS.accent}30`,
             padding: 20,
           }}>
-            <div style={{ fontSize: 13, fontWeight: 700, color: COLORS.accentLight, marginBottom: 10 }}>🎯 경영진 핵심 메시지</div>
+            <div style={{ fontSize: 13, fontWeight: 700, color: COLORS.accentLight, marginBottom: 10 }}>🎯 핵심 메시지</div>
             <div style={{
               fontSize: 14,
               color: COLORS.text,
@@ -582,7 +582,7 @@ export default function PetPlatformFlywheel() {
               "펫 트래커는 <span style={{ color: COLORS.accent, fontWeight: 700 }}>단순 제품이 아니라</span>,<br/>
               반려견 데이터를 중심으로 <span style={{ color: COLORS.gold, fontWeight: 700 }}>파트너 생태계</span>를 구축하고<br/>
               <span style={{ color: COLORS.green, fontWeight: 700 }}>다중 수익 모델</span>을 창출하며,<br/>
-              나아가 <span style={{ color: COLORS.purple, fontWeight: 700 }}>삼성 갤럭시 생태계</span>의 차별화된 Lock-in 요소가 됩니다."
+              나아가 <span style={{ color: COLORS.purple, fontWeight: 700 }}>디바이스 생태계</span>의 차별화된 Lock-in 요소가 됩니다."
             </div>
           </div>
         </div>
@@ -597,8 +597,7 @@ export default function PetPlatformFlywheel() {
         justifyContent: "space-between",
         alignItems: "center",
       }}>
-        <div style={{ fontSize: 9, color: COLORS.textDim }}>Samsung MX · C-Lab Pet Tracker → Sirius 전환 · 경영진 보고용</div>
-        <div style={{ fontSize: 9, color: COLORS.textDim }}>Confidential</div>
+        <div style={{ fontSize: 9, color: COLORS.textDim }}>Sirius · 올인원 펫 케어 플랫폼</div>
       </div>
     </div>
   );
